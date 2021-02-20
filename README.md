@@ -8,9 +8,6 @@ Placez le dossier Celeste-GBA dans le dossier "stable" de la librairie retro de 
 
 > CheminVersVotreVersionDePython\Lib\site-packages\retro\data\stable
 
-
-![Alt Text](https://i.imgur.com/eEUz8Jb.gif)
-
 ## Contributors
 
 Samir Belfaquir 
