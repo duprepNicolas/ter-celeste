@@ -1,0 +1,20 @@
+{
+  "info": {    
+    "fraise": {
+      "address": 50337302,
+      "type": "|u1"
+    },
+    "key": {
+      "address": 50337484,
+      "type": "|u1"
+    },
+    "level": {
+      "address": 50337080,
+      "type": "|u1"
+    },
+    "mort": {
+      "address": 50337148,
+      "type": "|u1"
+    }
+  }
+}
