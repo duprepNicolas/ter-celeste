@@ -1,6 +1,6 @@
 {
   "info": {    
-    "fraise": {
+    "strawberry": {
       "address": 50337302,
       "type": "|u1"
     },
@@ -12,7 +12,7 @@
       "address": 50337080,
       "type": "|u1"
     },
-    "mort": {
+    "death": {
       "address": 50337148,
       "type": "|u1"
     }

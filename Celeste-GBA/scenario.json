@@ -2,7 +2,7 @@
 "done": {
     "condition":"any",
     "variables": {
-      "mort": {
+      "death": {
         "op": "equal",
         "reference": 1
       },
@@ -14,7 +14,7 @@
   },
   "reward": {
     "variables": {
-      "fraise": {
+      "strawberry": {
         "reward": 1.0
       },
       "key": {
@@ -23,7 +23,7 @@
       "level": {
         "reward": 1.0
       },
-      "mort": {
+      "death": {
         "penalty": 1.0
       }
     }
