@@ -2,10 +2,6 @@
 "done": {
     "condition":"any",
     "variables": {
-      "death": {
-        "op": "equal",
-        "reference": 1
-      },
       "level": {
         "op": "greater-than",
         "reference": 0
@@ -24,8 +20,13 @@
         "reward": 1.0
       },
       "death": {
-        "penalty": 1.0
+        "penalty": 10.0              
       }
-    }
-  }
+    },
+    "script": "lua:isHeighest"
+  },
+    "scripts": [
+      "script.lua"
+    ]
+  
 }

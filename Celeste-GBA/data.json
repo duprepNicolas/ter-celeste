@@ -15,6 +15,10 @@
     "death": {
       "address": 50337148,
       "type": "|u1"
-    }
+    },
+    "height": {
+      "address": 50337010,
+      "type": "|u2"
+    } 
   }
 }
