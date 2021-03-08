@@ -1,6 +1,10 @@
 # ter-celeste
 M1 IMIS - TER : Celeste
 
+## Démo
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/duprepNicolas/ter-celeste.git/main)
+
 ## Importation de Celeste dans Gym-Retro
 
 

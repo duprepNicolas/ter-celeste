@@ -13330,25 +13330,46 @@ a.anchor-link {
 <div>
     <div style="width: 70%; float: left">
         <h1>Intelligence artificielle et Celeste </h1>
-        <h4>Samir Belfaquir, Romain Corbeau, Tristan LeSaux et Nicolas Dupré</h4>
+        <h4>Réalisé par : Samir Belfaquir, Romain Corbeau, Tristan LeSaux et Nicolas Dupré-Pawlak</h4>
     </div>
     <img style="width:20%; height: auto;" src="img/CelesteLogo.png">
 </div>
 </div>
 </div>
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div>
+    <h1>Récupération et installation du projet</h1>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h2> Avec Binder </h2>
+<a href="https://mybinder.org/v2/gh/duprepNicolas/ter-celeste.git/main">
+    <img src="https://mybinder.org/badge_logo.svg" />
+</a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2> Sans Binder </h2>
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
-
-<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">&lt;div align=&quot;middle&quot;&gt;</span>
-<span class="s2">&lt;video width=&quot;80%&quot; controls&gt;</span>
-<span class="s2">      &lt;source src=&quot;records/MP4/randomRun.mp4&quot; type=&quot;video/mp4&quot;&gt;</span>
-<span class="s2">&lt;/video&gt;&lt;/div&gt;&quot;&quot;&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>git clone https://github.com/duprepNicolas/ter-celeste.git
 </pre></div>
 
     </div>
@@ -13361,7 +13382,347 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Cloning into &#39;ter-celeste&#39;...
+remote: Enumerating objects: 114, done.
+remote: Counting objects: 100% (114/114), done.
+remote: Compressing objects: 100% (47/47), done.
+remote: Total 114 (delta 64), reused 104 (delta 61), pack-reused 0
+Receiving objects: 100% (114/114), 2.07 MiB | 3.10 MiB/s, done.
+Resolving deltas: 100% (64/64), done.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On se déplace dans le dossier</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cd</span> <span class="n">ter</span><span class="o">-</span><span class="n">celeste</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Installation de gym retro</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip3 install gym-retro
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already satisfied: gym-retro in /home/gunteam/.local/lib/python3.7/site-packages (0.8.0)
+Requirement already satisfied: gym in /home/gunteam/.local/lib/python3.7/site-packages (from gym-retro) (0.18.0)
+Requirement already satisfied: pyglet==1.*,&gt;=1.3.2 in /home/gunteam/.local/lib/python3.7/site-packages (from gym-retro) (1.5.15)
+Requirement already satisfied: cloudpickle&lt;1.7.0,&gt;=1.2.0 in /home/gunteam/.local/lib/python3.7/site-packages (from gym-&gt;gym-retro) (1.6.0)
+Requirement already satisfied: Pillow&lt;=7.2.0 in /home/gunteam/.local/lib/python3.7/site-packages (from gym-&gt;gym-retro) (7.2.0)
+Requirement already satisfied: scipy in /home/gunteam/.local/lib/python3.7/site-packages (from gym-&gt;gym-retro) (1.6.0)
+Requirement already satisfied: numpy&gt;=1.10.4 in /home/gunteam/.local/lib/python3.7/site-packages (from gym-&gt;gym-retro) (1.20.1)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On déplace le dossier</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mv</span> <span class="n">Celeste</span><span class="o">-</span><span class="n">GBA</span> <span class="o">&lt;</span><span class="n">Votre</span> <span class="n">chemin</span> <span class="n">d</span> <span class="n">installation</span> <span class="n">de</span> <span class="n">Python</span> <span class="n">en</span> <span class="n">version</span> <span class="mf">3.8</span> <span class="nb">max</span><span class="o">&gt;/</span><span class="n">Lib</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">retro</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">stable</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1> Quelques explications </h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p> 
+    Gym Retro est une plateforme d'apprentissage par renforcement pour les jeux rétro (GBA, Atari, NES, ...) développée par OpenAI. Cette librairie se base sur la fouille de données pour apprendre à se déplacer dans l'environnement.
+</p>
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+    Pour configurer l'environnement autour de Celeste, il est nécessaire de modifier quelques fichiers:
+    <ul>
+        <li> data.json </li>
+        <li> scenario.json </li>
+        <li> level.state </li>
+        <li> metadata.json </li>
+        <li> rom.sha </li>
+    </ul>
+</p>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1> data.json </h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+    Ce fichier contient les adresses mémoires ainsi que le type des rewards.
+    Ces adresses sont décimales et le type représente le nombre d'octets que prend la valeur.
+</p>
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1> scenario.json </h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+    Ce fichier communique avec data.json pour récupérer des variables et donne les informations importantes à l'agent telles que:
+    <ul>
+        <li> Quand est-ce qu'un épisode s'arrête ? </li>
+        <li> Dans quelles conditions l'agent récupérera un reward ? </li>
+        <li> Quelle est la valeur de chaque reward ? </li>
+    </ul>
+</p>
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1> level.state </h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+    C'est le fichier contenant l'état de départ.
+</p>
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1> metadata.json </h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+    Ce fichier permet à Gym-Retro de charger la state.
+</p>
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1> rom.sha </h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+    Ce fichier permet de vérifier que la rom lu correspond au bon jeu.
+    La fonction de hachage est SHA-1
+</p>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div>
+    <h1> Lancement du projet avec un random agent</h1>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">retro</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">env</span> <span class="o">=</span> <span class="n">retro</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">game</span><span class="o">=</span><span class="s1">&#39;Celeste-GBA&#39;</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s1">&#39;Level1&#39;</span><span class="p">)</span>
+    <span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">obs</span><span class="p">,</span> <span class="n">rew</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span>  <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">())</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">done</span><span class="p">:</span>
+            <span class="n">obs</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-3ba0189bb6ac&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span> 
+<span class="ansi-green-intense-fg ansi-bold">     14</span> <span class="ansi-green-fg">if</span> __name__ <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#34;__main__&#34;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 15</span><span class="ansi-red-fg">     </span>main<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-5-3ba0189bb6ac&gt;</span> in <span class="ansi-cyan-fg">main</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">def</span> main<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg">     </span>env <span class="ansi-blue-fg">=</span> retro<span class="ansi-blue-fg">.</span>make<span class="ansi-blue-fg">(</span>game<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;Celeste-GBA&#39;</span><span class="ansi-blue-fg">,</span> state<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;Level1&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     obs <span class="ansi-blue-fg">=</span> env<span class="ansi-blue-fg">.</span>reset<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span>     <span class="ansi-green-fg">while</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/gunteam/.local/lib/python3.7/site-packages/retro/__init__.py</span> in <span class="ansi-cyan-fg">make</span><span class="ansi-blue-fg">(game, state, inttype, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     47</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">     48</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 49</span><span class="ansi-red-fg">         </span>retro<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">.</span>get_romfile_path<span class="ansi-blue-fg">(</span>game<span class="ansi-blue-fg">,</span> inttype<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     50</span>     <span class="ansi-green-fg">except</span> FileNotFoundError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     51</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> retro<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">.</span>get_file_path<span class="ansi-blue-fg">(</span>game<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;rom.sha&#34;</span><span class="ansi-blue-fg">,</span> inttype<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/home/gunteam/.local/lib/python3.7/site-packages/retro/data/__init__.py</span> in <span class="ansi-cyan-fg">get_romfile_path</span><span class="ansi-blue-fg">(game, inttype)</span>
+<span class="ansi-green-intense-fg ansi-bold">    286</span>             <span class="ansi-green-fg">return</span> possible_path
+<span class="ansi-green-intense-fg ansi-bold">    287</span> 
+<span class="ansi-green-fg">--&gt; 288</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">raise</span> FileNotFoundError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;No romfiles found for game: %s&#34;</span> <span class="ansi-blue-fg">%</span> game<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    289</span> 
+<span class="ansi-green-intense-fg ansi-bold">    290</span> 
+
+<span class="ansi-red-fg">FileNotFoundError</span>: No romfiles found for game: Celeste-GBA</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1>Résultat attendu : </h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;div align=&quot;middle&quot;&gt;</span>
+<span class="s2">    &lt;video width=&quot;80%&quot; controls&gt;</span>
+<span class="s2">        &lt;source src=&quot;records/MP4/randomRun.mp4&quot; type=&quot;video/mp4&quot;&gt;</span>
+<span class="s2">    &lt;/video&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13378,20 +13739,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section>
+</div></div></section></section>
 </div>
 </div>
 
