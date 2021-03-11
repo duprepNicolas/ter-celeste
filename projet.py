@@ -1,7 +1,6 @@
 import retro
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import SubprocVecEnv
-import torch
 
 
 
