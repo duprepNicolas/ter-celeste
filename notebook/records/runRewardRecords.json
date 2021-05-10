@@ -1,0 +1,68 @@
+{
+    "records": [
+        {
+            "rewardSum": 0.1,
+            "runningReward": 0.1
+        },
+        {
+            "rewardSum": 0.1,
+            "runningReward": 0.1
+        },
+        {
+            "rewardSum": 0.1,
+            "runningReward": 0.1
+        },
+        {
+            "rewardSum": 0.2,
+            "runningReward": 0.101
+        },
+        {
+            "rewardSum": 0.30000000000000004,
+            "runningReward": 0.10299000000000001
+        },
+        {
+            "rewardSum": 0.4,
+            "runningReward": 0.10596010000000002
+        },
+        {
+            "rewardSum": 0.4,
+            "runningReward": 0.10890049900000001
+        },
+        {
+            "rewardSum": 0.4,
+            "runningReward": 0.11181149401000001
+        },
+        {
+            "rewardSum": 0.7000000000000001,
+            "runningReward": 0.11769337906990002
+        },
+        {
+            "rewardSum": 0.7000000000000001,
+            "runningReward": 0.12351644527920103
+        },
+        {
+            "rewardSum": 0.8,
+            "runningReward": 0.13028128082640902
+        },
+        {
+            "rewardSum": 0.8,
+            "runningReward": 0.13697846801814495
+        },
+        {
+            "rewardSum": 0.9,
+            "runningReward": 0.1446086833379635
+        },
+        {
+            "rewardSum": 1.1,
+            "runningReward": 0.1541625965045839
+        },
+        {
+            "rewardSum": 1.1,
+            "runningReward": 0.16362097053953806
+        },
+        {
+            "rewardSum": 1.3,
+            "runningReward": 0.1749847608341427
+        }
+    ]
+}
