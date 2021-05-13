@@ -6,10 +6,9 @@ import time
 import json
 
 #### DOCUMENTATION VIA NUMPY ####
-# np.exp() => calcul l'exponentiel de tout les elem de l'array en entrée
-# particulièrement utile dans les réseaux de neurones pour calculer le gradient de l'erreur.
-#
-# .ravel() => applati un table N-D en 1-D
+# np.exp() => exponentiel calculation of each input array 's elements
+# particularly useful in neural networks to calculate the gradient of the error
+# .ravel() => flatten a table N-D in 1-D
 
 # hyperparameters
 H = 200  # number of hidden layer neurons
@@ -30,7 +29,7 @@ if resume:
     model = pickle.load(open('save.p', 'rb'))
 else:
     model = {}
-    model['W1'] = np.random.randn(H, D) / np.sqrt(D)  # "Xavier" initialization -> Initialisation pseudo-random du poids des neurones
+    model['W1'] = np.random.randn(H, D) / np.sqrt(D)  # "Xavier" initialization -> Initialisation pseudo-random neuron weight
     model['W2'] = np.random.randn(H) / np.sqrt(H)
 
 grad_buffer = {k: np.zeros_like(v) for k, v in iter(model.items())}  # update buffers that add up gradients over a batch
@@ -75,11 +74,12 @@ def policy_backward(eph, epdlogp):
     """ backward pass. (eph is array of intermediate hidden states) """
     dW2 = np.dot(eph.T, epdlogp).ravel()
     dh = np.outer(epdlogp, model['W2'])
-    dh[eph <= 0] = 0  # backpro prelu : calcul comment modifier W1 et W2 par rapport à la reward/penalty
+    dh[eph <= 0] = 0  # backpro prelu : calculation how to modify W1 and W2 in relation to the reward/penalty
     dW1 = np.dot(dh.T, epx)
     return {'W1': dW1, 'W2': dW2}
 
 def writeInFile(total_reward_sum, total_running_reward):
+    """Write some rewards data in a file"""
     data = {}
     data['records'] = []
 
@@ -118,42 +118,15 @@ while True:
     aprob1, h1 = policy_forward(x)
     aprob2, h2 = policy_forward(x)
     aprob3, h3 = policy_forward(x)
-    # randome.uniform() --> renvoie une valeur aléatoire entre 0 et 1.
-    # random = np.random.uniform()
-    # # 0: Pause
-
-    # # 30: Haut
-    # # 35: Bas
-    # # 125: Gauche
-    # # 135: Droite
-    # # 256: Jump
-    # # 77: Dash ?
-
-    # # 410: Haut droite
-    # # 417: Bas droite
-
-    # # 25: Dash haut
-    # # 59: Dash droite
-
-    # # 145: Dash droite haut
-    # #actions = [0, 76]
-    # actions = [0, 30, 35, 125, 135, 256, 77, 410, 417, 25, 59, 145]
-    # print(int(actionIndex))
-    # action = actions[int(random*len(actions))] # if random < aprob else 18  # roll the dice!   
-    # # 1, 3, 5, 7, 9, 11, 13, 15 forward 
-    # # 16, 17, 19 top
 
     # record various intermediates (needed later for backprop)
     xs.append(x)  # observation
     hs1.append(h1)  # hidden state
     hs2.append(h2)  # hidden state
     hs3.append(h3)  # hidden state
-
-    # y = 1 if action == 2 else 0  # a "fake label"
-    # dlogps.append(
-    #     y - aprob1)  # grad that encourages the action that was taken to be taken (see
-    #                 # http://cs231n.github.io/neural-networks-2/#losses if confused)
     
+    # Action choice with ranges
+
     # elem1 = 0
     # if aprob1 <= 0.49:
     #     elem1 = 0
@@ -181,6 +154,8 @@ while True:
     # else:
     #     elem3 = 4
 
+
+    # Action choice
     elem1 = 1 if np.random.uniform() < aprob1 else 2
     elem2 = 1 if np.random.uniform() < aprob2 else 2
     elem31 = 1 if np.random.uniform() < aprob3 else 0
@@ -195,10 +170,12 @@ while True:
     else:
         elem3 = 0
 
+    # Fake labe http://cs231n.github.io/neural-networks-2/#losses
     dlogps1.append(elem1 - aprob1)
-    dlogps2.append(elem2 - aprob1)
+    dlogps2.append(elem2 - aprob2)
     dlogps3.append(elem3 - aprob3)
 
+    # Action
     a = [elem1, elem2, elem3, 0]
 
     # step the environment and get new measurements
